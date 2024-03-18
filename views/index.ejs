@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Your PostgresML Template</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <div class="d-flex flex-row">
+
+      <div class="d-flex flex-column w-50 align-items-center p-5 left-container vh-100 gap-5 overflow-scroll">
+        <h1 class="display-3 fw-bold">My Daily Notes</h1>
+        <form action="/add" method="post" class="d-flex flex-column align-items-center gap-3">
+          <div class="mb-3 w-100">
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="note"></textarea>
+          </div>
+          <input type="submit" value="Submit" class="btn btn-primary">
+        </form>
+        <div class="d-flex flex-column align-items-start note-container">
+        <% for( let i = 0; i < data.length; i++ ) {%>
+          <div>
+            <small class="note-date"><%= data[i][3] %></small>
+            <p><%= data[i][1] %></p>
+          </div>
+        <% } %>
+        </div>
+      </div>
+
+      <div class="d-flex flex-column flex-grow w-50 right-container min-vh-100 overflow-hidden position-relative justify-content-center align-items-center">
+        <div class="glow-1"></div>
+        <div class="glow-2"></div>
+        <div class="glow-3"></div>
+        <div class="glow-4"></div>
+        <div class="glow-5"></div>
+        <div class="z-1 d-flex align-items-center flex-column">
+          <h3>Powered by PostgresML</h2>
+          <img src="images/owl_gradient.png" alt="PostgresML" style="width: 3rem" class="pb-4">
+          <a class="btn btn-primary" href="/anaylze">Analyze Day</a>
+          <div class="daily-recap-container d-flex flex-column justify-content-center rounded-4 m-5 p-3">
+            <h5>Your days review</h5>
+            <p>score: <%= score %></p>
+            <p>description: </p>
+            <p><%= description %></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
