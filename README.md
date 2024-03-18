@@ -26,6 +26,9 @@ This will launch the application at [localhost:3000](http://localhost:3000/)
 ## Usage
 In a browser, navigate to localhost:3000.  Recored a note in the text area on the left and click submit.  Do this a couple times.  On the right click Analyze Day,  this will  produce a sentiment analysis score and a summarization of your day.  
 
+<img width="1327" alt="Screenshot 2024-03-18 at 3 20 33 PM" src="https://github.com/postgresml/example-expressjs/assets/39170265/8599e052-63b7-41f0-82de-7e743b48fa7c">
+
+
 ## Code
 We can augment this code to perform all types of ML.  Checkout the [postgresML docs](https://postgresml.org/docs/api/sql-extension/) for a full list.
 
