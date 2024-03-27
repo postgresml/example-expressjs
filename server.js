@@ -66,9 +66,9 @@ app.post("/add", async (req, res) => {
   res.redirect('/')
 })
 
-app.get("/anaylze", async (req, res) => {
+app.get("/analyze", async (req, res) => {
 
-  /// Construct a SQL request compute daily analysis and summarization of notes:
+  /// Construct a SQL request to compute daily analysis and summarization of notes:
   /// 1. Get all notes from today
   /// 2. Summarize the notes
   /// 3. Insert the summary and the sentiment score into the days table
